@@ -50,7 +50,7 @@ void loop() {
     difR = round(dif);              // it rounds its findings
     Serial.println("The difference between the minimum temperature(20°C) and the current temperature is "+String(difR));
     delay(Time+250);                // it says its findings and gives us time to read it.
-    val = (potVolt/5)*(difR/10)*155;// Then, it finds the fan speed
+    val = (potVolt/5.)*(difR/10.)*155.;// Then, it finds the fan speed
     sped = round(val) + 100;        // It makes the fan speed readable for the motor 
     Serial.println("The motor speed is "+String(round(val))+" out of 255");
     delay(Time);                    // and reports the fan speed, giving us time to read it.
